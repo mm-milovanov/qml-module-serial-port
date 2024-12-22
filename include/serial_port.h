@@ -1,7 +1,7 @@
 #ifndef SERIALPORT_H
 #define SERIALPORT_H
 
-#include <lib-Qnvg/iioport.h>
+#include <io_port_interface.h>
 
 #include <QObject>
 #include <QSerialPort>

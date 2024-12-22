@@ -1,4 +1,4 @@
-#include "serialportgui.h"
+#include <gui/serial_port_gui.h>
 
 #include <QSerialPortInfo>
 #include <QDebug>
@@ -142,10 +142,8 @@ QString SerialPortGUI::getLocation(){
 }
 
 QString SerialPortGUI::getDescription(){
-    if(_index >= 0){
-        if(_index < _info.count())
+    if(_index >= 0 && _index < _info.count())
             return _info[_index].description();
-    }
     return QString();
 }
 
@@ -153,7 +151,8 @@ bool SerialPortGUI::getConnected(){
     return _connected;
 }
 void SerialPortGUI::setConnected(bool v){
-    _connected = v; emit connectedChanged(_connected);
+    _connected = v;
+    emit connectedChanged(_connected);
 }
 
 int SerialPortGUI::rowCount(const QModelIndex& parent) const

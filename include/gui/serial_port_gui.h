@@ -1,7 +1,7 @@
 #ifndef SERIALPORTGUI_H
 #define SERIALPORTGUI_H
 
-#include <lib-Qnvg/serialport.h>
+#include <serial_port.h>
 
 #include <QObject>
 #include <QAbstractListModel>
