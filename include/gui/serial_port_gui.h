@@ -16,7 +16,7 @@ class SerialPortGUI : public QAbstractListModel
 
 public:
     explicit SerialPortGUI(QObject *parent = nullptr,
-                           QString defaultBaudrate = "921600");
+                           QString defaultBaudrate = "115200");
 
     Q_PROPERTY(int count READ getCount NOTIFY countChanged)
     int getCount();
